@@ -7,33 +7,35 @@ using System.Web;
 
 namespace WebApplication3.Models
 {
-    public class UsuarioRepository
-    {       private MySqlConnection Connect()
-        {
-            string connString = "Server=127.0.0.1;Port=3306;Database=bbdd_placemybet;Uid=root;password=;SslMode=none";
-            MySqlConnection con = new MySqlConnection(connString);
-            return con;
-        }
+    public class UsuarioRepository{
+
+        //private  MySqlConnection Connect()
+        //{
+        //        string connString = "Server=127.0.0.1;Port=3306;Database=bbdd_placemybet;Uid=root;password=;SslMode=none";
+        //        MySqlConnection con = new MySqlConnection(connString);
+        //        return con;
+        //}
 
         internal Usuario Retrieve()
         {
-            MySqlConnection con = Connect();
-            MySqlCommand command = con.CreateCommand();
-            command.CommandText = "select * from usuario";
+    //        MySqlConnection con = Connect();
+    //        MySqlCommand command = con.CreateCommand();
+    //        command.CommandText = "select * from usuario";
 
-            con.Open();
-            MySqlDataReader res = command.ExecuteReader();
+    //        con.Open();
+    //        MySqlDataReader res = command.ExecuteReader();
 
-            Usuario u = null;
-            if (res.Read())
+    //        Usuario u = null;
+    //        if (res.Read())
             {
-               Debug.WriteLine("Recuperado:" + res.GetInt32(0) + " " + res.GetString(1) + " " + res.GetString(2) + " " + res.GetString(3) + " " + res.GetString(4));
-                u = new Usuario(res.GetInt32(0), res.GetString(1), res.GetString(2), res.GetString(3), res.GetString(4));
+                // Debug.WriteLine("Recuperado:" + res.GetInt32(0) + " " + res.GetString(1) + " " + res.GetString(2) + " " + res.GetString(3) + " " + res.GetString(4));
+                // u = new Usuario(res.GetInt32(0), res.GetString(1), res.GetString(2), res.GetString(3), res.GetString(4));
+                return null;
 
             }
 
-            con.Close();
-            return u;
+            //con.close();
+            //return u;
         }
     }
 }

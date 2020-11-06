@@ -7,16 +7,20 @@ namespace WebApplication3.Models
 {
     public class Evento
     {
-        public Evento(int id, string equipo_Local, string equipo_Visitante, DateTime fecha, int goles)
+        public Evento()
         {
-            this.id = id;
+        }
+
+        public Evento(int eventoId, string equipo_Local, string equipo_Visitante, DateTime fecha, int goles)
+        {
+            this.EventoId = eventoId;
             Equipo_Local = equipo_Local;
             Equipo_Visitante = equipo_Visitante;
             Fecha = fecha;
             Goles = goles;
         }
 
-        public int id { get; set; }
+        public int EventoId { get; set; }
         public string Equipo_Local { get; set; }
         public string Equipo_Visitante { get; set; }
         public DateTime Fecha { get; set; }
