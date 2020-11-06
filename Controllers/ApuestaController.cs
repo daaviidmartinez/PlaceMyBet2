@@ -11,7 +11,7 @@ namespace WebApplication3.Controllers
     public class ApuestaController : ApiController
     {
 
-        // GET: api/Apuesta/5
+        // GET: api/Apuesta/?Id=id
         [Authorize(Roles = "admin")]
         public ApuestaDTO Get()
         {
